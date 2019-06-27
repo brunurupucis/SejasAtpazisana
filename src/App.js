@@ -2,6 +2,7 @@ import React from 'react';
 import Clarifai from 'clarifai'; /* need to add because npm install clarify and now App can access it*/
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
+import Signin from './components/Signin/Signin';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Particles from 'react-particles-js'; /* background particles walking arround*/
@@ -59,10 +60,10 @@ class App extends React.Component {
     return (
     <div className="App">
       <Particles className="particles"
-              params={particlesOption}
-              
+              params={particlesOption}  
             />
       <Navigation/>
+      <Signin/>
       <Logo/>
       <Rank/>
       <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit ={this.onButtonSubmit}/>{/* Showing value from ImageLinkForm.js onInputChange to here onInputChange = (event) => {
